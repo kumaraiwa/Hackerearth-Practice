@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int isvowel(char a) {
+	return (a=='a' || a=='e' || a=='i' || a=='o' || a=='u');
+}
+int main()
+{
+   	string a;
+   	cin>>a;
+   	int cnt = 0, i = 0, m = 0;
+   	while(i<a.size()) {
+   		if(isvowel(a[i])) {
+   			cnt++;
+   			i++;
+   		}
+   		else {
+   			cnt = 0;
+   			i++;
+   		}
+   		cout<<m<<" "<<cnt<<endl;
+   		m = max(m,cnt);
+   	}
+   	cout<<m<<endl;
+    return 0;
+}
+
